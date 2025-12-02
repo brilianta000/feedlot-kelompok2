@@ -351,10 +351,16 @@ footer a {
 }
 
 .berita {
-  background : url(imge/berita.PNG) center no-repeat;
+  background : linear-gradient(rgba(36, 6, 6, 0.83) 
+    ,rgba(146, 122, 113, 0.23)), url(imge/bgnews.PNG) center no-repeat;
   background-size : cover;
   align-content: center;
   text-align: center;
+}
+.berita h1 {
+  font-size : 60px;
+  font-weight : bold;
+  padding-top : 30px;
 }
 
 .product {
@@ -663,72 +669,63 @@ footer a {
   width: 100%;
   text-align: center;
   margin-top: 40px;
-}
-.org-wrap {
-  background-color : white;
-  margin : 20px 80px 20px 80px;
-  padding : 10px
-}
-
-.org-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
+}/* Container Title */
+.org-container .org-title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 28px;
 }
 
 .org-line {
-  width: 90%;
-  height: 1px;
-  background: black;
-  margin: 0 auto 30px auto;
+    width: 150px;
+    height: 3px;
+    background: #333;
+    margin: 10px auto 25px auto;
 }
 
-.org-photo {
-  width: 120px;
-  height: 140px;
-  border-radius: 20px;
-  object-fit: cover;
+/* Card Style (tanpa gambar) */
+.org-card {
+    background: #3d0a0a;
+    color: white;
+    padding: 18px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.2s ease;
+    min-height: 110px; /* biar kotak rata ukuran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.org-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 20px;
+/* Hover effect */
+.org-card:hover {
+    background: #5a0f0f;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.line-vertical {
-  width: 3px;
-  height: 35px;
-  background: black;
-  margin: 5px auto;
+/* Nama */
+.org-card h6 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 3px;
 }
 
-.line-horizontal {
-  width: 60%;
-  height: 3px;
-  background: black;
-  margin: 10px auto;
+/* Posisi */
+.org-card p {
+    font-size: 14px;
+    margin: 0;
 }
 
-.org-row {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  margin-top: 15px;
+/* Responsive */
+@media(max-width: 576px) {
+    .org-card {
+        padding: 15px;
+        min-height: 100px;
+    }
 }
 
-.org-name {
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 5px;
-}
 
-.org-role {
-  font-size: 14px;
-  margin-top: 2px;
-}
 
 .judul-vmk {
   width: 100%;
