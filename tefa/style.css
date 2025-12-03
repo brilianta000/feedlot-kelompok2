@@ -474,22 +474,20 @@ footer a {
 
 
 /* detail */
+/* ===============================
+   DETAIL BERITA — DESKTOP
+================================= */
 
-@media (max-width: 992px) {
-    .detail {
-        height: 250px;
-        padding-left: 15px;
-        margin-top: 50px;
-    }
+.detail {
+    background: linear-gradient(rgba(36, 6, 6, 0.83), rgba(146, 122, 113, 0.23)),
+                url('imge/bgnews.PNG') center/cover no-repeat;
+    height: 350px;
+    padding-left: 20px;
+    display: flex;
+    align-items: flex-end;
 }
 
-@media (max-width: 576px) {
-    .detail {
-        height: 200px;
-        padding-left: 10px;
-        margin-top : 50px
-    }
-}
+/* tombol back */
 .detail-back {
     background-color: #007A7A;
     color: white;
@@ -504,11 +502,11 @@ footer a {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .detail-back:hover {
     background-color: #054f4f;
 }
 
+/* Judul */
 #judul {
     font-size: 32px;
     font-weight: bold;
@@ -516,6 +514,7 @@ footer a {
     text-align: center;
 }
 
+/* Konten */
 .detail-berita {
     padding: 20px;
     display: grid;
@@ -525,31 +524,41 @@ footer a {
 
 #gambar {
     width: 100%;
-    max-width: 1400px;
-    height: auto;
+    max-width: 1200px;
     border-radius: 14px;
-    margin: 20px 30px 0 30px;
     object-fit: cover;
+    margin: 20px 15px 0 15px;
 }
 
 #tanggal {
     color: #666;
     font-size: 15px;
-    margin-bottom: 20px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #isi {
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.8;
     text-align: justify;
-    white-space: pre-line; 
-    max-width: 1000px;
+    white-space: pre-line;
+    max-width: 900px;
     margin: auto;
-    text-indent: 40px;
+    text-indent: 35px;
 }
 
+
+/* ===============================
+   RESPONSIVE 992px  
+================================= */
 @media (max-width: 992px) {
+
+    .detail {
+        height: 260px;           /* jangan terlalu kecil */
+        padding-left: 15px;
+        align-items: flex-end;
+    }
+
     #judul {
         font-size: 28px;
     }
@@ -557,10 +566,11 @@ footer a {
     #isi {
         font-size: 16px;
         padding: 0 15px;
+        text-indent: 25px;
     }
 
     #gambar {
-        margin: 20px 15px 0 15px;
+        margin: 20px 10px 0 10px;
     }
 
     .detail-back {
@@ -569,22 +579,40 @@ footer a {
     }
 }
 
+
+/* ===============================
+   RESPONSIVE 576px  (HP)
+================================= */
 @media (max-width: 576px) {
+
+    .detail {
+        height: 200px;
+        padding-left: 12px;
+        background-position: center top !important;
+    }
+
     #judul {
-        font-size: 24px;
+        font-size: 22px;
+        padding: 0 10px;
     }
 
     #isi {
         font-size: 15px;
+        padding: 0 10px;
+        text-indent: 20px;
+    }
+
+    #gambar {
+        margin: 12px;
+        border-radius: 10px;
     }
 
     .detail-back {
-        width: 60px;
-        height: 45px;
-        font-size: 22px;
+        width: 55px;
+        height: 40px;
+        font-size: 20px;
     }
 }
-
 
 .box {
   display : flex;
@@ -604,7 +632,6 @@ footer a {
   font-size : 24px;
 }
 
-/* abut sus  */
 .about-container {
   background-color : #FFF4EE;
   margin : 0
@@ -669,7 +696,7 @@ footer a {
   width: 100%;
   text-align: center;
   margin-top: 40px;
-}/* Container Title */
+}
 .org-container .org-title {
     font-weight: 700;
     text-align: center;
@@ -683,7 +710,6 @@ footer a {
     margin: 10px auto 25px auto;
 }
 
-/* Card Style (tanpa gambar) */
 .org-card {
     background: #3d0a0a;
     color: white;
@@ -691,27 +717,23 @@ footer a {
     border-radius: 15px;
     text-align: center;
     transition: 0.2s ease;
-    min-height: 110px; /* biar kotak rata ukuran */
+    min-height: 110px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Hover effect */
 .org-card:hover {
     background: #5a0f0f;
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* Nama */
 .org-card h6 {
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 3px;
 }
-
-/* Posisi */
 .org-card p {
     font-size: 14px;
     margin: 0;
@@ -902,6 +924,9 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 350px;
+  height: auto
 }
 
 .milk-text {
@@ -974,10 +999,6 @@ footer a {
   line-height: 1.4;
 }
 
-/* =========================
-   PENITIPAN HEWAN
-   (Bootstrap Card)
-========================= */
 .penitipan-section {
   background: linear-gradient(180deg, rgba(70,26,26,0.92) 70%, rgba(70,26,26,0.5) 100%), url('imge/berita2.jpeg') center/cover no-repeat;
   padding: 50px 0 80px 0;
@@ -1097,10 +1118,32 @@ footer a {
   margin: 0;
   font-size: 18px;
 }
+@media (max-width: 768px) {
+  .nutrisi-box {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+  }
 
-/* =========================
-   RESPONSIVE
-========================= */
+  .milk-text {
+      font-size: 20px;
+      line-height: 1.2;
+  }
+}
+@media (max-width: 480px) {
+  .milk-text {
+      font-size: 18px;
+  }
+
+  .info-proses {
+      padding: 20px 15px;
+  }
+
+  .info-box {
+      font-size: 14px;
+  }
+}
+
 @media (max-width: 992px) {
   .info-proses {
     flex-direction: column;
